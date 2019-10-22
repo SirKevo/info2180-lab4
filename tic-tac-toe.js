@@ -14,8 +14,9 @@
 
 window.onload = function(){
 
-var square = document.getElementById("board");
-		board.classList.add('square');
+	var square = document.getElementId("board");
+		document.querySelector("div").classList.add("square");
+		// board.classList.add('square');
 		console.log(square);
 
 }
