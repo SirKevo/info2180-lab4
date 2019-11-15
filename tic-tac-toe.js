@@ -1,22 +1,12 @@
-"use strict";
+window.addEventListener('load', () => {
+  const squares = document.querySelectorAll('#board div');
 
-
-
-// let boxes = document.querySelector('div').className = "square";
-
-
-// boxes.forEach(function(elem, index, list) {
-// 	elem.addEventListener('onload', function(e) 
-// {
-// 	e.target.classList.add('status');
-// })
-// })
-
-window.onload = function(){
-
-	var square = document.getElementId("board");
-		document.querySelector("div").classList.add("square");
-		// board.classList.add('square');
-		console.log(square);
-
-}
+  for (let x = 0; x < squares.length; x++) {
+    squares[x].classList.add('square');
+    console.log(squares);
+    // Now Add an event listener when a square is clicked
+   // squares[x].addEventListener('click', () => {
+      // write code to add X or O to the square clicked
+  }
+  
+});
