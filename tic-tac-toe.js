@@ -3,52 +3,44 @@ window.addEventListener('load', () => {
   let playerX = true;
   
   for (let y = 0; y < squares.length; y++) {
-    squares[y].classList.add('square');
+    squares[y].classList.add('square', 'hover');
     console.log(squares);
-    // Now Add an event listener when a square is clicked
-   // squares[y].addEventListener('click', () => {
-      // write code to add X or O to the square clicked
-   
    
    squares[y].addEventListener('click', () => {
-    console.log(y);
-   
-    
-    
-    console.log(squares);
-    
-    
-    
+
+  // Adding X or O alternately to a square when clicked
     if (playerX == true) {
       squares[y].innerHTML = 'X';
       squares[y].classList.add('X');
-      // playerX = false;
-    } else {
       
+    } else {
       squares[y].innerHTML = 'O';
       squares[y].classList.add('O');
-      // playerX = true;
     }
      playerX = !playerX; 
-    
-    // //Use a function to keep track of clicks
-    // function clickTrack(){
-    //   const clickTracker = [];
-    // };
    });
+   
+   squares[y].onmouseover = () => {
+     squares[y].classList.add('hover');
+   };
+   
+    squares[y].onmouseleave = () => {
+     squares[y].classList.remove('hover');
+   };
+   
+   
+  // squares[y].addEventListener('mouseover', () => {
+    
+  //   if (event.type == 'mouseover') {
+  //     squares[y].target.add('hover')
+  //   }else{
       
-  }   
+      
+  //   }
+    
+  // });
   
   
-// let X = document.createTextNode('X');
-// let O = document.createTextNode('O');
+  }
 
-// square.append(X);
-// document.body.append(square.X);
-
-// square.append(O);
-// document.body.append(square.O);
-
-  // for (let X = 0; X);
-  
 });
