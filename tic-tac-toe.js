@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   let playerX = true;
   
   for (let y = 0; y < squares.length; y++) {
-    squares[y].classList.add('square', 'hover');
+    squares[y].classList.add('square');
     console.log(squares);
    
    squares[y].addEventListener('click', () => {
@@ -20,13 +20,15 @@ window.addEventListener('load', () => {
      playerX = !playerX; 
    });
    
-   squares[y].onmouseover = () => {
-     squares[y].classList.add('hover');
-   };
    
-    squares[y].onmouseleave = () => {
-     squares[y].classList.remove('hover');
-   };
+   
+  squares[y].onmouseover = () => {
+    squares[y].classList.add('hover');
+  };
+   
+  squares[y].onmouseleave = () => {
+    squares[y].classList.remove('hover');
+  }; 
    
    
   // squares[y].addEventListener('mouseover', () => {
